@@ -1,0 +1,19 @@
+
+#imagen_fondo{
+    height: 65vh;
+    background-image: url('../../img/601448646dfbe10018e00c5e.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#imagen_fondo h1 {
+    color:  rgba(216, 11, 11, 0.5);
+    margin: 0;
+    font-size: 50px;
+  }
