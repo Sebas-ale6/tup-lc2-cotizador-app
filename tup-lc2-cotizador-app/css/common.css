@@ -1,6 +1,4 @@
-
-@import
-url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap');
 
 * {
     font-family: 'Raleway', sans-serif;
@@ -11,7 +9,6 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap'
     padding: 0;
   }
   
-
 #imagen_fondo{
     height: 25vh;
     background-image: url('../img/stonks.webp');
@@ -22,14 +19,14 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap'
     align-items: center;
     justify-content: center;
     flex-direction: initial;
-
 }
+
 .logo {
     max-height: 100px;
     align-content: center;
     border-radius: 10em;
-    box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
-    border: 1px solid #000;
+    box-shadow: 7px 7px 12px 0px rgba(20, 20, 20, 0.3);
+    border: 1px inset #000;
   }
   
 
@@ -65,7 +62,6 @@ nav {
     background-color: #7ba9d6;
     height: 450px;
     line-height: 80px;
-
   }
 
 nav ul {
@@ -73,7 +69,6 @@ nav ul {
     padding: 30px;
     list-style-type: none;
     justify-content:space-around;
-
 }
 
   nav ul li {
@@ -81,24 +76,21 @@ nav ul {
     flex-shrink: 1;
     flex-basis: 25%;
     text-align: center;
-
 }
 
 nav ul li a:hover {
-    background-color:  rgba(190, 13, 19, 0.3);
+    background-color:  rgba(12, 226, 198, 0.3);
 }
 
 footer{
-  background-color: #cdccc9d8;
-  color: #0c3903;
+  background-color: #dba33bf3;
+  color: #000;
   display: flex;
   padding: 50px;
   justify-content: space-around;
   height: auto;
-  
-   
-}
 
+}
 
 .contenedor {
     max-width: auto;
