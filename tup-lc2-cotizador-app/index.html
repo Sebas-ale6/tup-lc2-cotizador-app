@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> DOLAR HOUSE</title>
-    <link rel="stylesheet" href="css/pages/page.css">
-    <link rel="icon" href="img/1cb98588-17d5-4ceb-8496-6263d61aa082.jpg"  type="image/jpeg">">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="icon" href="img/logo_dolar.jpg"  type="image/jpeg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap">
 </head>
 
 
@@ -19,7 +20,7 @@
          <header>
              <section id="imagen_fondo">
     
-                <img src="img/1cb98588-17d5-4ceb-8496-6263d61aa082.jpg" alt="imagen logo" class="logo">
+                <img src="img/logo_dolar.jpg" alt="imagen logo" class="logo">
     
                 <h1>Cotizador de monedas</h1>
             </section>
@@ -31,10 +32,10 @@
 
             <nav>
                 <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Mi archivo</a></li>
-                <li><a href="#">Informes</a></li>
-                <li><a href="#">Contactenos</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="MiArchivo.html">Mi archivo</a></li>
+                <li><a href="informes.html">Informes</a></li>
+                <li><a href="contacto.html">Contactenos</a></li>
                 </ul>
                 </nav>
 
@@ -42,8 +43,78 @@
 
         <div class="item_b">
           <main>
+            <h1 class="titulo"> pizzarra de Cotizaciones</h1>
 
-            Main Content
+            <div class="contenedor">
+                <div class="filtro">
+                    <label for="moneda">Seleccione una moneda:</label>
+                    <select id="moneda">
+                        <option value="todas">Todas</option>
+                        <option value="dolar-oficial">Dólar Oficial</option>
+                        <option value="dolar-oficial">Dólar Blue</option>
+                        <option value="dolar-oficial">Dólar Bolsa</option>
+                        <option value="dolar-oficial">Dólar Contado con liqui</option>
+                        <option value="dolar-oficial">Dólar tarjeta</option>
+                        <option value="dolar-oficial">Dólar Mayorista</option>
+                        <option value="dolar-oficial">Dólar Cripto</option>
+                        <option value="dolar-oficial">Dólar Euro</option>
+                        <option value="dolar-oficial">Real  Brasileño</option>
+                        <option value="dolar-oficial">Peso  Chileno</option>
+                        <option value="dolar-oficial">Peso  uruguayo</option>
+                      
+                    </select>
+                    <button onclick="buscar()">Buscar</button>
+                </div>
+                
+
+                <div id="ultima_actualizacion">Última actualización: XX/XX/XXXX XX:XX</div>
+
+                <div class="container">
+                    <div class="pizarra-grid">
+                        <div class="item">Oficial</div>
+                        <div class="item">Compra $500</div>
+                        <div class="item">Venta $400</div>
+                        <button class="boton-estrella">Favorito</button>
+                    </div>
+                    <div class="pizarra-grid">
+                        <div class="item">Oficial</div>
+                        <div class="item">Compra $</div>
+                        <div class="item">Venta $</div>
+                        <button class="boton-estrella">Favorito</button>
+                    </div>
+                    <div class="pizarra-grid">
+                        <div class="item">Oficial</div>
+                        <div class="item">Compra $</div>
+                        <div class="item">Venta $</div>
+                        <button class="boton-estrella">Favorito</button>
+                    </div>
+                    <div class="pizarra-grid">
+                        <div class="item">Oficial</div>
+                        <div class="item">Compra $</div>
+                        <div class="item">Venta $</div>
+                        <button class="boton-estrella">Favorito</button>
+                    </div>
+                    <div class="pizarra-grid">
+                        <div class="item">Oficial</div>
+                        <div class="item">Compra $</div>
+                        <div class="item">Venta $</div>
+                        <button class="boton-estrella">Favorito</button>
+                    </div>
+                  
+                    <div class="pizarra-grid">
+                        <div class="item">Oficial</div>
+                        <div class="item">Compra $</div>
+                        <div class="item">Venta $</div>
+                        <button class="boton-estrella">Favorito</button>
+                    </div>
+                  
+                  
+
+                </div>
+                <div id="ultima_actualizacion">datos obtenidos de <b>dolarapi</b>.com</div>
+                
+             
+            </div>
 
           </main>
 
@@ -51,9 +122,46 @@
 
 
         <div class ="item_d">
+
+
         <footer>
+
+            
         
-            Footer
+            <ul>
+                <h2>Institucional</h2>
+                <li><b>¿Quienes somos? </b></li>
+                <li><b>Socios estrategicos</b></li>
+                <li><b>Trabaje con nosotros</b></li>
+                <li><b>Ayuda</b></li>
+                
+            </ul>
+
+              <ul>
+                <h2>Accesos</h2>
+                <li><b>Inicio</b></li>
+                <li><b>Mi archivo</b></li>
+                <li><b>Informes</b></li>
+                <li><b>Contactenos</b></li>
+              
+              </ul>
+
+              <ul>
+                <h2>Contactos</h2>
+                <li><b>universidad tecnologica nacional</b></li>
+                <li><b>Zeballos 1341 - s2000BQA</b></li>
+                <li><b>Telefono.:+54 9 341 55 5555 5555</b></li>
+                <li><b>Rosario</b></li>
+              </ul>
+
+              <ul>
+                <h2>Desarrollado por</h2>
+                <li><b>Sebastian Morcillo</b></li>
+                <li><b>Oscar Ezequiel Maciel</b></li>
+                
+              </ul>
+
+
     
         </footer>
 

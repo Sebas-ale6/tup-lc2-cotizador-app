@@ -1,0 +1,156 @@
+
+@import
+url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+#imagen_fondo{
+    height: 25vh;
+    background-image: url('../img/stonks.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: initial;
+
+}
+.logo {
+    max-height: 100px;
+    align-content: center;
+    border-radius: 10em;
+    box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
+    border: 1px solid #000;
+  }
+  
+
+#imagen_fondo h1 {
+    color: #000;
+    margin: 0;
+    font-size: 50px;
+  }
+
+.titulo{
+    text-align: center;
+}
+
+  .contenedor_grid1 {
+    display: grid;
+    grid-template-columns: repeat(4) ;
+    grid-template-areas: 
+        "header header header header"
+        "sidebar main main main"
+        "footer footer footer footer";
+    background-color: #cdccc9d8;
+    height: 100vh;
+}
+
+
+.item_a{grid-area:header;}
+.item_b{grid-area:main;}
+.item_c{grid-area:sidebar;}
+.item_d{grid-area:footer;}
+
+nav {
+    color: black;
+    background-color: #7ba9d6;
+    height: 450px;
+    line-height: 80px;
+
+  }
+
+nav ul {
+    margin: 0;
+    padding: 30px;
+    list-style-type: none;
+    justify-content:space-around;
+
+}
+
+  nav ul li {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 25%;
+    text-align: center;
+
+}
+
+nav ul li a:hover {
+    background-color:  rgba(190, 13, 19, 0.3);
+}
+
+footer{
+  background-color: #cdccc9d8;
+  color: #0c3903;
+  display: flex;
+  padding: 50px;
+  justify-content: space-around;
+  height: auto;
+  
+   
+}
+
+
+.contenedor {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000;
+    
+}
+
+.filtro {
+    margin-bottom: 20px;
+}
+
+.contenedor_grid2 {
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    gap: 10px;
+}
+
+
+#ultima_actualizacion{
+    
+    text-align: right;
+
+
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    padding: 10px;
+   
+}
+
+.pizarra-grid {
+    display: flex;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    border: 1px solid #3918cd;
+    border-radius: 3px;
+    width: 250px;
+}
+
+.boton-estrella {
+    padding: 5px 10px;
+    background-color: rgb(73, 98, 210);
+    border: none;
+    cursor: pointer;
+    justify-self: end; 
+    
+
+}
