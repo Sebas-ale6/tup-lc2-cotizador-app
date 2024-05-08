@@ -42,7 +42,7 @@
 
   .contenedor_grid1 {
     display: grid;
-    grid-template-columns: repeat(4) ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
         "header header header header"
         "sidebar main main main"
