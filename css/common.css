@@ -51,6 +51,7 @@
     height: 100vh;
 }
 
+/* tengo que crear una clase item en html y en css (usar un row) para poner el tamaño de la fila footer sea mas chica*/
 
 .item_a{grid-area:header;}
 .item_b{grid-area:main;}
@@ -62,6 +63,7 @@ nav {
     background-color: #7ba9d6;
     height: 450px;
     line-height: 80px;
+    border: 1px solid #000;
   }
 
 nav ul {
@@ -89,6 +91,7 @@ footer{
   padding: 50px;
   justify-content: space-around;
   height: auto;
+  border: 1px solid #000;
 
 }
 

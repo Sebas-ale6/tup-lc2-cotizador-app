@@ -67,9 +67,11 @@ input[type="reset"] {
     border: 1px solid #000;
     
     }
-.logo {
+.logo_contacto {
     width: 50px; /* Tamaño deseado para tu logo */
     height: auto; /* Para mantener la proporción de la imagen */
     margin: 10px; /* Espaciado entre el logo y el texto */
+    border-radius: 10em;
+    border: 1px inset #000;
 }
     
