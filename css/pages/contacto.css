@@ -1,0 +1,76 @@
+
+form {
+    max-width: 400px;
+    margin: 10px 10px;
+    padding: 10px;
+    background-color: #e1dede;
+    border: 1px solid #ccc;
+   
+
+   
+}
+
+label {
+    display:block;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #5bb15c;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+   
+    
+}
+input[type="reset"] {
+    background-color: #011601;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+   
+    
+}
+
+.texto {
+    text-align: justify;
+}
+.texto_derecha {
+    text-align: right; 
+   
+}
+
+.contenedor {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #000;
+    
+}
+
+.contenedor2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    
+   
+}
+
+.contenedor3 {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a los extremos del contenedor */
+    align-items: center; /* Alinea verticalmente los elementos */
+    max-width: auto;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #000;
+    
+    }
+.logo_contacto {
+    width: 50px; /* Tamaño deseado para tu logo */
+    height: auto; /* Para mantener la proporción de la imagen */
+    margin: 10px; /* Espaciado entre el logo y el texto */
+    border-radius: 10em;
+    border: 1px inset #000;
+}
