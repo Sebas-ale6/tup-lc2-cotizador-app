@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap');
+@import
+url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap');
 
 * {
     font-family: 'Raleway', sans-serif;
@@ -6,7 +7,8 @@
 
   body {
     margin: 0;
-    padding: 0;
+    padding: 50;
+    font-weight:bolder;
   }
   
 #imagen_fondo{
@@ -37,12 +39,13 @@
   }
 
 .titulo{
-    text-align: center;
+    text-align:center;
+    font-size: clamp(12px, 4vw, 32px);
 }
 
   .contenedor_grid1 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4) ;
     grid-template-areas: 
         "header header header header"
         "sidebar main main main"
@@ -51,7 +54,6 @@
     height: 100vh;
 }
 
-/* tengo que crear una clase item en html y en css (usar un row) para poner el tamaño de la fila footer sea mas chica*/
 
 .item_a{grid-area:header;}
 .item_b{grid-area:main;}
@@ -59,25 +61,28 @@
 .item_d{grid-area:footer;}
 
 nav {
+
     color: black;
     background-color: #7ba9d6;
     height: 450px;
     line-height: 80px;
-    border: 1px solid #000;
   }
 
 nav ul {
     margin: 0;
     padding: 30px;
     list-style-type: none;
-    justify-content:space-around;
+    justify-content:end;
 }
 
   nav ul li {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: 25%;
+    display: grid;
+    border: black solid 2px;
     text-align: center;
+    font-weight:bolder;
+    padding: 1px;
+    background-color:deepskyblue;
+    font-size: clamp(6px, 4vw, 15px);
 }
 
 nav ul li a:hover {
@@ -91,7 +96,8 @@ footer{
   padding: 50px;
   justify-content: space-around;
   height: auto;
-  border: 1px solid #000;
+  font-size: clamp(6px, 4vw, 15px);
+  font-weight:bolder;
 
 }
 
@@ -146,6 +152,14 @@ footer{
     border: none;
     cursor: pointer;
     justify-self: end; 
-    
 
+}
+
+.boton-estrella:hover{
+  background-color:yellow;
+  transform: scale(1.1);
+}
+
+.boton-estrella:checked ~ svg {
+  fill: #ffeb49;
 }
