@@ -5,6 +5,8 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap'
     font-family: 'Raleway', sans-serif;
   }
 
+  .negro{color: #000;}
+
   body {
     margin: 0;
     padding: 50;
@@ -81,12 +83,16 @@ nav ul {
     text-align: center;
     font-weight:bolder;
     padding: 1px;
-    background-color:deepskyblue;
+    background-color:rgb(43, 43, 235);
     font-size: clamp(6px, 4vw, 15px);
 }
 
 nav ul li a:hover {
-    background-color:  rgba(12, 226, 198, 0.3);
+    background-color:  rgba(105, 180, 234, 0.3);
+}
+
+nav ul li a {
+  color: #000;
 }
 
 footer{
@@ -95,17 +101,19 @@ footer{
   display: flex;
   padding: 50px;
   justify-content: space-around;
-  height: auto;
   font-size: clamp(6px, 4vw, 15px);
   font-weight:bolder;
 
 }
 
+footer ul li a {
+  color: #000;
+}
+
 .contenedor {
     max-width: auto;
-    margin: 0 auto;
+    margin: 15 auto;
     padding: 20px;
-    border: 1px solid #000;
     
 }
 
