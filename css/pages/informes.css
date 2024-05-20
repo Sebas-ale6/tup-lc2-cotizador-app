@@ -1,3 +1,88 @@
-.filtro {
-  
+form {
+    max-width: 400px;
+    margin: 10px 10px;
+    padding: 10px;
+    background-color: #e1dede;
+    border: 1px solid #ccc;
+}
+
+label {
+    display:block;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #5bb15c;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+   
+    
+}
+input[type="reset"] {
+    background-color: #011601;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+   
+    
+}
+
+.texto {
+    text-align: justify;
+}
+.texto_derecha {
+    text-align: right; 
+   
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows:auto auto;
+    max-width: auto;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #000;
+    
+}
+
+.subcontenedor{
+    align-self: center;
+    justify-self: right;
+
+}
+
+.subcontenedor2{
+    justify-self: end;
+}
+
+.grafico{
+width: 500px;
+
+}
+
+.subcontenedor3{ /*tabla*/
+    grid-column: 1 / 3;
+    grid-row: 2;
+    border:#666161 solid;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 534px;
+
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 1px;
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+th {
+    background-color: #263bdf;
 }
