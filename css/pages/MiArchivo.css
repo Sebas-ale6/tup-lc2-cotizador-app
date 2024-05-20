@@ -3,6 +3,11 @@
     justify-content: center;
     align-items: center;
     height: auto;
+    max-width: auto;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #000;
+    
 }
 .titulo{
     text-align:center;

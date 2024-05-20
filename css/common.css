@@ -62,7 +62,7 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap'
 .item_c{grid-area:sidebar;}
 .item_d{grid-area:footer;}
 
-nav {
+.item_c nav {
 
     color: black;
     background-color: #7ba9d6;
@@ -70,14 +70,14 @@ nav {
     line-height: 80px;
   }
 
-nav ul {
+.item_c nav ul {
     margin: 0;
     padding: 30px;
     list-style-type: none;
     justify-content:end;
 }
 
-  nav ul li {
+.item_c nav ul li {
     display: grid;
     border: black solid 2px;
     text-align: center;
@@ -87,12 +87,13 @@ nav ul {
     font-size: clamp(6px, 4vw, 15px);
 }
 
-nav ul li a:hover {
+.item_c nav ul li a:hover {
     background-color:  rgba(105, 180, 234, 0.3);
 }
 
-nav ul li a {
+.item_c nav ul li a {
   color: #000;
+  text-decoration: none;
 }
 
 footer{
@@ -108,12 +109,14 @@ footer{
 
 footer ul li a {
   color: #000;
+  text-decoration: none;
 }
 
 .contenedor {
     max-width: auto;
     margin: 15 auto;
     padding: 1px;
+    
     
 }
 
