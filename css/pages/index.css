@@ -1,0 +1,62 @@
+.contenedor {
+    max-width: auto;
+    margin: 15 auto;
+    padding: 1px;
+    
+    
+}
+
+.filtro {
+    margin-bottom: 20px;
+}
+
+.contenedor_grid2 {
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    gap: 10px;
+}
+
+
+#ultima_actualizacion{
+    
+    text-align: right;
+
+
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    padding: 10px;
+   
+}
+
+.pizarra-grid {
+    display: flex;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    border: 1px solid #3918cd;
+    border-radius: 3px;
+    width: 250px;
+}
+
+.boton-estrella {
+    padding: 5px 10px;
+    background-color: rgb(73, 98, 210);
+    border: none;
+    cursor: pointer;
+    justify-self: end; 
+
+}
+
+.boton-estrella:hover{
+  background-color:yellow;
+  transform: scale(1.1);
+}
+
+.boton-estrella:checked ~ svg {
+  fill: #ffeb49;
+}
