@@ -44,7 +44,7 @@ input[type="reset"] {
 
 .contenedor {
     max-width: auto;
-    margin: 0 auto;
+    margin: 0px;
     padding: 0px;
     border: 1px solid #000;
     
