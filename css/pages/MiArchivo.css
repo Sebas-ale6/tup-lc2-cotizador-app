@@ -1,0 +1,20 @@
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 600px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 1px;
+    text-align: left;
+}
+th {
+    background-color: #263bdf;
+}
