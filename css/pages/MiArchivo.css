@@ -4,6 +4,10 @@
     align-items: center;
     height: auto;
 }
+.titulo{
+    text-align:center;
+    font-size: clamp(12px, 4vw, 32px);
+}
 
 table {
     border-collapse: collapse;
