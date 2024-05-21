@@ -11,24 +11,6 @@ label {
     margin-bottom: 10px;
 }
 
-input[type="submit"] {
-    background-color: #5bb15c;
-    color: white;
-    padding: 10px 10px;
-    border: none;
-    cursor: pointer;
-   
-    
-}
-input[type="reset"] {
-    background-color: #011601;
-    color: white;
-    padding: 10px 10px;
-    border: none;
-    cursor: pointer;
-   
-    
-}
 
 .texto {
     text-align: justify;
@@ -39,14 +21,23 @@ input[type="reset"] {
 }
 
 .contenedor {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows:auto auto;
+
     max-width: auto;
     margin: 0px;
     padding: 0px;
     border: 1px solid #000;
     
+}
+.contenedor2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows:auto auto;
+    margin-left: 150px;
+
+
+
+
+
 }
 
 .subcontenedor{
@@ -86,3 +77,4 @@ th, td {
 th {
     background-color: #263bdf;
 }
+
