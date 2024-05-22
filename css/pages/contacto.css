@@ -5,9 +5,6 @@ form {
     padding: 10px;
     background-color: #e1dede;
     border: 1px solid #ccc;
-   
-
-   
 }
 
 label {
@@ -30,8 +27,6 @@ input[type="reset"] {
     padding: 10px 10px;
     border: none;
     cursor: pointer;
-   
-    
 }
 
 .texto {
