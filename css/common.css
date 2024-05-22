@@ -12,12 +12,17 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap'
     padding: 50;
     font-weight:bolder;
   }
+
+  .migapan{
+    text-align: right;
+  }
   
 #imagen_fondo{
     height: 25vh;
-    background-image: url('../img/stonks.webp');
+    background-image: url('../img/header_image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     width: 100%;
     display: flex;
     align-items: center;
@@ -35,9 +40,10 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap'
   
 
 #imagen_fondo h1 {
-    color: #000;
+    color: whitesmoke;
     margin: 0;
     font-size: 50px;
+    border-radius: 30px;
   }
 
 .titulo{
@@ -83,6 +89,7 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap'
     text-align: center;
     font-weight:bolder;
     padding: 1px;
+    border-radius: 30px;
     background-color:rgb(43, 43, 235);
     font-size: clamp(6px, 4vw, 15px);
 }
@@ -108,9 +115,10 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap'
   flex-direction: column;
   align-items: center; /* Alinea verticalmente los elementos */
   max-width: auto;
-  margin: 0 100px;
+  margin: 0 50px;
   padding: 0px;
   border: 1px solid #000;
+  border-radius: 30px;
   background-color: white;
   
   }
@@ -133,5 +141,3 @@ footer ul li a {
 footer ul li a:hover {
 background-color: grey;
 }
-
-
