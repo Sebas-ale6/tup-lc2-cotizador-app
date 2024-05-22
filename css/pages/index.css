@@ -33,7 +33,7 @@
    
 }
 
-.pizarra-grid {
+.pizarra {
     display: flex;
     grid-template-columns: auto auto;
     gap: 10px;
