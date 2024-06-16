@@ -42,20 +42,16 @@
     width: 250px;
 }
 
-.boton-estrella {
+.boton-style {
     padding: 5px 10px;
+    font-size: 16px;
     background-color: rgb(73, 98, 210);
     border: none;
     cursor: pointer;
-    justify-self: end; 
-
+    justify-self: end;
 }
 
-.boton-estrella:hover{
-  background-color:yellow;
-  transform: scale(1.1);
-}
-
-.boton-estrella:checked ~ svg {
-  fill: #ffeb49;
+.marked {
+    background-color: yellow !important;
+    color: black;
 }
