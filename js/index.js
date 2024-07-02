@@ -1,51 +1,99 @@
-const buttons = document.querySelectorAll(".boton-estrella");
+const getDolarData = async() => {
+
+    const url = "https://dolarapi.com/v1/dolares";
+    const request = await fetch(url);
+    const data = await request.json();
+    return data;
+
+};
+
+const getOtherData = async() => {
+
+    const url = "https://dolarapi.com/v1/cotizaciones";
+    const request = await fetch(url);
+    const data = await request.json();
+    return data;
+
+};
+
+const deployDollars = async() => {
+
+    const dollars = await getDolarData();
+    const others = await getOtherData();
+    const allMoneys = [...dollars, ...others];
+
+    const containerDollars = document.getElementById("containerDollars");
+
+    allMoneys.map((dolar)=>{
+
+        const element = document.createElement("div");
+
+        element.setAttribute("class", "pizarra");
+
+        element.innerHTML = `
+        <div class="item">${dolar.nombre}</div>
+        <div class="item"> Compra $${Math.round(dolar.compra)}</div>
+        <div class="item"> Venta $${Math.round(dolar.venta)}</div>
+        <button class="boton-estrella">Favorito</button>`
+        ; 
+
+        containerDollars.appendChild(element);
+
+    })
+
+};
+
+deployDollars();
+
+const searchDollar = async() => {
+
+    const dollars = await getDolarData();
+    const others = await getOtherData();
+    const allMoneys = [...dollars, ...others]
+    const containerDollars = document.getElementById("containerDollars");
+    const select = document.getElementById("moneda");
+
+    containerDollars.innerHTML = "";
+
+    if(select.value == "Todas"){
+
+        allMoneys.map((dolar)=>{
+    
+                const element = document.createElement("div");
+    
+                element.setAttribute("class", "pizarra");
+        
+                element.innerHTML = `
+                <div class="item">${dolar.nombre}</div>
+                <div class="item"> Compra $${Math.round(dolar.compra)}</div>
+                <div class="item"> Venta $${Math.round(dolar.venta)}</div>
+                <button class="boton-estrella">Favorito</button>`
+                ; 
+        
+                containerDollars.appendChild(element);
+        })
+    }else{
+
+        allMoneys.map((dolar)=>{
+
+            if(dolar.nombre == select.value){
+    
+                const element = document.createElement("div");
+    
+                element.setAttribute("class", "containerDollars");
+        
+                element.innerHTML = `
+                <div class="pizarra">
+                <div class="item">${dolar.nombre}</div>
+                <div class="item"> Compra $${Math.round(dolar.compra)}</div>
+                <div class="item"> Venta $${Math.round(dolar.venta)}</div>
+                <button class="boton-estrella">Favorito</button>
+                </div>`; 
+        
+                containerDollars.appendChild(element);
+            }
+        })
+    }
 
 
-window.addEventListener("DOMContentLoaded", () => {    //Recupera el estado de los botones desde localStorage cuando se carga la página
-    buttons.forEach(button => {
-        const buttonId = button.id;
-        const isMarked = localStorage.getItem(buttonId)==='true';
-
-        if (isMarked) {
-            button.classList.add("marked");
-            button.textContent = "Favorito";
-
-        } else {
-
-            button.classList.remove("marked");
-            button.textContent = "Favorito";
-
-        }
-    });
-});
-
-
-buttons.forEach(button => {  // Itera sobre cada botón y agrega los EventListeners
-    button.addEventListener("click", function(event) {
-        const buttonId = event.target.id;
-        const isMarked = event.target.classList.toggle("marked");
-
- 
-        localStorage.setItem(buttonId, isMarked);   // Se guarda el estado en el localStorage
-
-        if (isMarked) {
-            event.target.textContent = "Favorito";
-        } else {
-            event.target.textContent = "Favorito";
-        }
-    });
-
-    button.addEventListener("mouseover", event => {
-        if (!event.target.classList.contains("marked")) {
-            event.target.style.backgroundColor = "yellow";
-            event.target.textContent = "Favorito";
-        }
-    });
-
-    button.addEventListener("mouseout", event => {
-        if (!event.target.classList.contains("marked")) {
-            event.target.style.backgroundColor = "rgb(73, 98, 210)";
-            event.target.textContent = "Favorito";
-        }
-    });
-});
+}
