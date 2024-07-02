@@ -9,15 +9,12 @@
     <link rel="icon" href="img/logo_dolar.jpg" type="image/jpeg" id="logo_title">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap">
     <link rel="stylesheet" href="css/pages/index.css">
-    
 </head>
 
 
 <body>
 
-
     <div class="contenedor_grid1">
-
 
         <div class="item_a">
             <header>
@@ -64,80 +61,28 @@
                     <div class="filtro">
                         <label for="moneda">Seleccione una moneda:</label>
                         <select id="moneda">
-                            <option value="todas">Todas</option>
-                            <option value="dolar-oficial">Dólar Oficial</option>
-                            <option value="dolar-oficial">Dólar Blue</option>
-                            <option value="dolar-oficial">Dólar Bolsa</option>
-                            <option value="dolar-oficial">Dólar Contado con liqui</option>
-                            <option value="dolar-oficial">Dólar tarjeta</option>
-                            <option value="dolar-oficial">Dólar Mayorista</option>
-                            <option value="dolar-oficial">Dólar Cripto</option>
-                            <option value="dolar-oficial">Dólar Euro</option>
-                            <option value="dolar-oficial">Real Brasileño</option>
-                            <option value="dolar-oficial">Peso Chileno</option>
-                            <option value="dolar-oficial">Peso uruguayo</option>
+                            <option value="Todas">Todas</option>
+                            <option value="Oficial">Dólar Oficial</option>
+                            <option value="Blue">Dólar Blue</option>
+                            <option value="Bolsa">Dólar Bolsa</option>
+                            <option value="Contado con liquidación">Dolar CCL</option>
+                            <option value="Tarjeta">Dólar tarjeta</option>
+                            <option value="Mayorista">Dólar Mayorista</option>
+                            <option value="Cripto">Dólar Cripto</option>
+                            <option value="Euro">Dólar Euro</option>
+                            <option value="Real Brasileño">Real Brasileño</option>
+                            <option value="Peso Chileno">Peso Chileno</option>
+                            <option value="Peso Uruguayo">Peso uruguayo</option>
 
                         </select>
-                        <button onclick="buscar()">Buscar</button>
+                        <button onclick="searchDollar()">Buscar</button>
                     </div>
 
 
-                    <div id="ultima_actualizacion">Última actualización: 07/05/2024 XX:XX</div>
-
-                    <body>
-                        <div class="container">
-                            <div class="pizarra">
-                                <div class="item">Oficial</div>
-                                <div class="item">Compra $500</div>
-                                <div class="item">Venta $400</div>
-                                <button class="boton-estrella boton-style" id="botonEstrella1">Favorito</button>
-                            </div>
-                            <div class="pizarra">
-                                <div class="item">Blue</div>
-                                <div class="item">Compra $995</div>
-                                <div class="item">Venta $1015</div>
-                                <button class="boton-estrella boton-style" id="botonEstrella2">Favorito</button>
-                            </div>
-                            <div class="pizarra">
-                                <div class="item">Bolsa</div>
-                                <div class="item">Compra $1355</div>
-                                <div class="item">Venta $1419</div>
-                                <button class="boton-estrella boton-style" id="botonEstrella3">Favorito</button>
-                            </div>
-                            <div class="pizarra">
-                                <div class="item">Liqui</div>
-                                <div class="item">Compra $996</div>
-                                <div class="item">Venta $1000</div>
-                                <button class="boton-estrella boton-style" id="botonEstrella4">Favorito</button>
-                            </div>
-                            <div class="pizarra">
-                                <div class="item">Tarjeta</div>
-                                <div class="item">Compra $768</div>
-                                <div class="item">Venta $900</div>
-                                <button class="boton-estrella boton-style" id="botonEstrella5">Favorito</button>
-                            </div>
-                            <div class="pizarra">
-                                <div class="item">Mayor</div>
-                                <div class="item">Compra $1005</div>
-                                <div class="item">Venta $990</div>
-                                <button class="boton-estrella boton-style" id="botonEstrella6">Favorito</button>
-                            </div>
-                            <div class="pizarra">
-                                <div class="item">Cripto</div>
-                                <div class="item">Compra $300</div>
-                                <div class="item">Venta $250</div>
-                                <button class="boton-estrella boton-style" id="botonEstrella7">Favorito</button>
-                            </div>
-                            <div class="pizarra">
-                                <div class="item">Euro</div>
-                                <div class="item">Compra $906</div>
-                                <div class="item">Venta $900</div>
-                                <button class="boton-estrella boton-style" id="botonEstrella8">Favorito</button>
-                            </div>
-                        </div>
+                    <div id="ultima_act"></div>
+                    <div class="container" id="containerDollars">
+                    </div>
                     <div id="ultima_actualizacion">Datos obtenidos de <b>dolarapi</b>.com</div>
-
-
                 </div>
 
             </main>
@@ -196,8 +141,9 @@
     </div>
 
 
+    <script src="./js/index.js"></script>
 
-    <script src="js/index.js"></script>
+
 </body>
 
 
