@@ -93,7 +93,15 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap'
     background-color:rgb(43, 43, 235);
     font-size: clamp(6px, 4vw, 15px);
 }
-
+#rojo{
+  background-color: red;
+}
+#verde{
+  background-color: green;
+}
+#amarillo{
+  background-color: yellow;
+}
 .item_c nav ul li a:hover {
     background-color:  rgba(105, 180, 234, 0.3);
 }
