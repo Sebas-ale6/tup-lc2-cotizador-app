@@ -5,6 +5,9 @@ form {
     padding: 10px;
     background-color: #e1dede;
     border: 1px solid #ccc;
+   
+
+   
 }
 
 label {
@@ -13,7 +16,7 @@ label {
 }
 
 input[type="submit"] {
-    background-color: #5bb15c;
+    background-color: rgb(255, 102, 0);
     color: white;
     padding: 10px 10px;
     border: none;
@@ -22,11 +25,13 @@ input[type="submit"] {
     
 }
 input[type="reset"] {
-    background-color: #011601;
+    background-color: rgb(136, 60, 10);
     color: white;
     padding: 10px 10px;
     border: none;
     cursor: pointer;
+   
+    
 }
 
 .texto {

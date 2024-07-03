@@ -90,18 +90,20 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap'
     font-weight:bolder;
     padding: 1px;
     border-radius: 30px;
-    background-color:rgb(43, 43, 235);
+    background-color:  #7ba9d6;
     font-size: clamp(6px, 4vw, 15px);
 }
-#rojo{
-  background-color: red;
+
+#blue{
+  background-color:rgb(43, 43, 235);
 }
-#verde{
-  background-color: green;
+#purple{
+  background-color: rgb(110, 30, 110);
 }
-#amarillo{
-  background-color: yellow;
+#orange{
+  background-color: rgb(255, 102, 0);
 }
+
 .item_c nav ul li a:hover {
     background-color:  rgba(105, 180, 234, 0.3);
 }

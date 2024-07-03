@@ -34,7 +34,7 @@ const deployDollars = async() => {
         <div class="item">${dolar.nombre}</div>
         <div class="item"> Compra $${Math.round(dolar.compra)}</div>
         <div class="item"> Venta $${Math.round(dolar.venta)}</div>
-        <button class="boton-estrella">Favorito</button>`
+        <button class="boton-estrella"><b>Favorito</b></button>`
         ; 
 
         containerDollars.appendChild(element);
@@ -67,7 +67,7 @@ const searchDollar = async() => {
                 <div class="item">${dolar.nombre}</div>
                 <div class="item"> Compra $${Math.round(dolar.compra)}</div>
                 <div class="item"> Venta $${Math.round(dolar.venta)}</div>
-                <button class="boton-estrella">Favorito</button>`
+                <button class="boton-estrella"><b>Favorito</b></button>`
                 ; 
         
                 containerDollars.appendChild(element);
@@ -87,7 +87,7 @@ const searchDollar = async() => {
                 <div class="item">${dolar.nombre}</div>
                 <div class="item"> Compra $${Math.round(dolar.compra)}</div>
                 <div class="item"> Venta $${Math.round(dolar.venta)}</div>
-                <button class="boton-estrella">Favorito</button>
+                <button class="boton-estrella"><b>Favorito</b></button>
                 </div>`; 
         
                 containerDollars.appendChild(element);
