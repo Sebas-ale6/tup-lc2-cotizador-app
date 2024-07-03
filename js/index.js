@@ -61,7 +61,7 @@ const searchDollar = async() => {
     
                 const element = document.createElement("div");
     
-                element.setAttribute("class", "containerDollars");
+                element.setAttribute("class", "pizarra");
         
                 element.innerHTML = `
                 <div class="item">${dolar.nombre}</div>
@@ -80,7 +80,7 @@ const searchDollar = async() => {
     
                 const element = document.createElement("div");
     
-                element.setAttribute("class", "containerDollars");
+                element.setAttribute("id", "containerDollars");
         
                 element.innerHTML = `
                 <div class="pizarra">
@@ -88,7 +88,8 @@ const searchDollar = async() => {
                 <div class="item"> Compra $${Math.round(dolar.compra)}</div>
                 <div class="item"> Venta $${Math.round(dolar.venta)}</div>
                 <button class="boton-estrella"><b>Favorito</b></button>
-                </div>`; 
+                </div>
+                <div><p> Fecha de actualizacion: ${new Date(dolar.fechaActualizacion)}</p></div>`;
         
                 containerDollars.appendChild(element);
             }
