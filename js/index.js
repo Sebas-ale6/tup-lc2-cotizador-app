@@ -61,7 +61,7 @@ const searchDollar = async() => {
     
                 const element = document.createElement("div");
     
-                element.setAttribute("class", "pizarra");
+                element.setAttribute("class", "containerDollars");
         
                 element.innerHTML = `
                 <div class="item">${dolar.nombre}</div>
