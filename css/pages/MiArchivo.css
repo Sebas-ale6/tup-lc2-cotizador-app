@@ -1,4 +1,4 @@
-.contenedor {
+.contenedorDolar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,9 +6,14 @@
     max-width: auto;
     margin: 0px;
     padding: 0px;
-    border: 1px solid #000;
-    
 }
+
+.contenedor_data{
+    width: 20%;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
 .titulo{
     text-align:center;
     font-size: clamp(12px, 4vw, 32px);
