@@ -27,6 +27,16 @@ const deployDollars = () => {
 
     // Limpiar el contenedor antes de agregar los elementos actualizados
     container.innerHTML = "";
+      // Agregar el contenido estatico de contenedorDolar
+    container.innerHTML += `
+    <div class="contenedorDolar">
+        <span class="contenedor_data">Fecha</span>
+        <span class="contenedor_data">Moneda</span>
+        <span class="contenedor_data">Compra</span>
+        <span class="contenedor_data">Venta</span>
+        <span class="contenedor_data">Acción</span>
+    </div>
+`;
 
     allDollars.map((dolar,index)=>{
 
