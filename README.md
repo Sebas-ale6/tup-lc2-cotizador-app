@@ -34,3 +34,7 @@ Luego de ingresar todo, y presionar el boton de enviar, se envia el mensaje a Em
 al mail de uno de los integrantes del grupo, para poder recibirlo y visualizarlo
 
 Nota: Eliminamos el archivo nosotros.html, nos parecio una adicion innecesaria.
+
+Apreciacion personal del grupo acerca del TP:
+Honestamente nos resulto un poco complicado tirando a bastante, por ahi tuvimos complicaciones por otras materias, 
+lo cual nos dio poco tiempo para dedicarle al TP.
