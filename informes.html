@@ -6,189 +6,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> DOLAR HOUSE</title>
   <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/pages/MiArchivo.css">
   <link rel="icon" href="img/logo_dolar.jpg" type="image/jpeg">
   <link rel="stylesheet" href="css/pages/informes.css">
 </head>
 
-
 <body>
-
-
   <div class="contenedor_grid1">
-
-
     <div class="item_a">
       <header>
         <section id="imagen_fondo">
-
           <img src="img/logo_dolar.jpg" alt="imagen logo" class="logo">
-
           <h1>Cotizador de monedas</h1>
         </section>
       </header>
     </div>
 
-
-    <div class="item_c">
-
-      <nav id="purple">
-        <ul>
+ <!-- navbar -->
+ <div class="item_c">
+  <nav>
+      <ul>
           <li><a href="index.html">Inicio</a></li>
           <li id="blue"><a href="MiArchivo.html">Mi archivo</a></li>
           <li id="purple"><a href="informes.html">Informes</a></li>
           <li id="orange"><a href="contacto.html">Contactenos</a></li>
-        </ul>
-        <div class="comentario">
+      </ul>
 
-          <img src="img/imagen_comentario.jpg" alt="comentario" class="imagen_comentario">
-          <h3>Roger Medina</h3>
-          Tienen un buen servicio <br>
-          y las cotizaciones son correctas
-     
+      <div class="comentario">
+          <img src="img/imagen_comentario.jpg" alt="comentario" class="imagen_comentario" id="comment-image">
+          <h3 id="comment-author">Roger Medina</h3>
+          <p id="comment-text">Tienen un buen servicio <br>
+            y las cotizaciones son correctas</p>
       </div>
-      </nav>
-
-    </div>
+  </nav>
+</div>
 
     <div class="item_b">
       <main>
         <div class="migapan">
-          Usted esta aqui: <a href="index.html">Inicio</a> > <span>contacto</span>
+          Usted está aquí: <a href="index.html">Inicio</a> > <span>contacto</span>
         </div>
-
-
         <h1 class="titulo">Informes de cotizaciones</h1>
         <div class="contenedor">
           <div class="contenedor2">
             <div class="subcontenedor">
               <label for="moneda">Seleccione una moneda:</label>
               <select id="moneda">
-                <option value="todas">Todas</option>
-                <option value="dolar-oficial">Dólar Oficial</option>
-                <option value="dolar-oficial">Dólar Blue</option>
-                <option value="dolar-oficial">Dólar Bolsa</option>
-                <option value="dolar-oficial">Dólar Contado con liqui</option>
-                <option value="dolar-oficial">Dólar tarjeta</option>
-                <option value="dolar-oficial">Dólar Mayorista</option>
-                <option value="dolar-oficial">Dólar Cripto</option>
-                <option value="dolar-oficial">Dólar Euro</option>
-                <option value="dolar-oficial">Real Brasileño</option>
-                <option value="dolar-oficial">Peso Chileno</option>
-                <option value="dolar-oficial">Peso uruguayo</option>
-
+                <option value="Oficial">Dólar Oficial</option>
+                <option value="Blue">Dólar Blue</option>
+                <option value="Bolsa">Dólar Bolsa</option>
+                <option value="Tarjeta">Dólar Tarjeta</option>
+                <option value="Mayorista">Dólar Mayorista</option>
+                <option value="Cripto">Dólar Cripto</option>
               </select>
-              <button onclick="buscar()">Buscar</button>
+              <button id="botonBuscar">Buscar</button>
             </div>
-
-
             <div class="subcontenedor2">
-
-              <img src="img/grafico_dolar.png" alt="image" class="grafico">
-
-            </div>
-
-            <div class="subcontenedor3">
-
-              <table>
-                <thead>
-                  <tr>
-                    <th>Moneda</th>
-                    <th>Fecha</th>
-                    <th>Compra</th>
-                    <th>Venta</th>
-                    <th>Variacion</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>dolar blue</td>
-                    <td>15/4/2024<br>
-
-                    </td>
-                    <td>$995 <br>
-                      $996 <br>
-                      $1355 <br>
-                      $1050 <br>
-                      $1000 <br>
-
-                    </td>
-                    <td>$1015 <br>
-                      $1000 <br>
-                      $1419 <br>
-                      $1086 <br>
-                      $1200 <br></td>
-                    <td>V <br>
-                      A <br>
-                      V <br>
-                      A <br>
-                      A <br>
-
-                    </td>
-                  </tr>
-
-                </tbody>
-              </table>
+              <div id="grafico"></div>
             </div>
           </div>
         </div>
+        <div class="contenedorDolar">
+          <span class="contenedor_data" id="purple">Fecha</span>
+          <span class="contenedor_data" id="purple">Moneda</span>
+          <span class="contenedor_data" id="purple">Compra</span>
+          <span class="contenedor_data" id="purple">Venta</span>
+          <span class="contenedor_data" id="purple">Variacion</span>
+        </div>
+        <div id="contenedor"></div>
       </main>
-
     </div>
-
-
-
     <div class="item_d">
-
-
       <footer>
-
-
-
         <ul>
           <h2>Institucional</h2>
-          <li><a href="nosotros.html"><b>¿Quienes somos?</b></a></li>
-          <li><a href="#">Socios estrategicos</a></li>
+          <li><a href="#"><b>¿Quienes somos?</b></a></li>
+          <li><a href="#">Socios estratégicos</a></li>
           <li><a href="contacto.html"><b>Trabaje con nosotros</b></a></li>
           <li><a href="#">Ayuda</a></li>
-
-      </ul>
-
+        </ul>
         <ul>
           <h2>Accesos</h2>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="MiArchivo.html">Mi archivo</a></li>
           <li><a href="informes.html">Informes</a></li>
           <li><a href="contacto.html">Contactenos</a></li>
-
         </ul>
-
         <ul>
           <h2>Contactos</h2>
-          <li><b>universidad tecnologica nacional</b></li>
+          <li><b>Universidad Tecnológica Nacional</b></li>
           <li><b>Zeballos 1341 - s2000BQA</b></li>
           <li><b>Rosario</b></li>
           <li><b>+54 9 3413555555</b></li>
         </ul>
-
         <ul>
           <h2>Desarrollado por</h2>
           <li><b>Sebastian Morcillo(53233)</b></li>
           <li><b>Oscar Ezequiel Maciel(53171)</b></li>
           <p><b>TUP106-2024</b></p>
-
         </ul>
-
-
-
       </footer>
-
     </div>
-
-
   </div>
 
+
+  <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="./js/informes.js" defer></script>
+  <script src="./js/common.js"></script>
 </body>
-
-
 
 </html>

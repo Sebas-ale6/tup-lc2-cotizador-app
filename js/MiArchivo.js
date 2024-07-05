@@ -30,24 +30,26 @@ const deployDollars = () => {
       // Agregar el contenido estatico de contenedorDolar
     container.innerHTML += `
     <div class="contenedorDolar">
-        <span class="contenedor_data">Fecha</span>
-        <span class="contenedor_data">Moneda</span>
-        <span class="contenedor_data">Compra</span>
-        <span class="contenedor_data">Venta</span>
-        <span class="contenedor_data">Acción</span>
+        <span class="contenedor_data" id="blue">Fecha</span>
+        <span class="contenedor_data" id="blue">Moneda</span>
+        <span class="contenedor_data" id="blue">Compra</span>
+        <span class="contenedor_data" id="blue">Venta</span>
+        <span class="contenedor_data" id="blue">Acción</span>
     </div>
 `;
 
     allDollars.map((dolar,index)=>{
 
         const element = document.createElement("div");
+        const currentDateTime = new Date().toLocaleString();
+        dolar.fechaGuardado = currentDateTime;
 
         element.setAttribute("class", "contenedorDolar");
 
-        const fecha = moment(dolar.fechaActualizacion).format('MMMM Do YYYY, h:mm:ss a')
+        const fecha = moment(dolar.fechaGuardado).format('MMMM Do YYYY, h:mm:ss a')
 
         element.innerHTML = `
-        <span class="contenedor_data">${fecha}</span>
+        <span class="contenedor_data" >${fecha}</span>
         <span class="contenedor_data">${dolar.nombre}</span>
         <span class="contenedor_data">${dolar.compra}</span>
         <span class="contenedor_data">${dolar.venta}</span>
@@ -71,4 +73,3 @@ const deployDollars = () => {
 };
 
 deployDollars();
-

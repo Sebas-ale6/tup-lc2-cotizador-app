@@ -23,6 +23,9 @@ const saveDollar = async(dolar) => {
 
     //convierto los dolares guardados a formato array
     const dolaresGuardadosParse = JSON.parse(dolaresGuardados)||[];
+    
+    const currentDateTime = new Date().toLocaleString();
+    dolar.fechaGuardado = currentDateTime;
 
     //agregamos el dolar seleccionado al array de dolares
     dolaresGuardadosParse.push(dolar);
@@ -34,35 +37,19 @@ const saveDollar = async(dolar) => {
 
 const deployDollars = async() => {
 
-    //obtenemos las cotizaciones de dolares
     const dollars = await getDolarData();
-
-    //obtenemos las cotizaciones de otras monedas
     const others = await getOtherData();
-
-    //creo un array con los datos de los arrays anteriores
     const allMoneys = [...dollars, ...others];
-
-    //selecciono el div que contendra las cotizaciones
     const containerDollars = document.getElementById("containerDollars");
 
-    //tomamos el array de monedas y usamos el metodo .map() para ejecutar una funcion por cada moneda que haya
     allMoneys.map( (dolar)=>{
 
-        //creamos un div
         const element = document.createElement("div");
-
-        //creamos el elemento button
         const button = document.createElement("button");
-
-        //al div, le asignamos la class, pizarra
         element.setAttribute("class", "pizarra");
 
-        button.setAttribute("class", "boton-estrella"); //al button, le asignamos la class, boton-estrella
-        
+        button.setAttribute("class", "boton-estrella");
         button.setAttribute("onclick", `saveDollar(${JSON.stringify(dolar)})`)
-        //al button, le asignamos un onclick, que va a ejecutar la funcion saveDollar, pasandole como parametro el objeto dolar
-        //JSON.stringify sirve para convertir un objeto json a string
 
         element.innerHTML = `
         <div class="item">${dolar.nombre}</div>
@@ -71,11 +58,7 @@ const deployDollars = async() => {
         ; 
 
         button.innerHTML = "Guardar";
-
-        //metemos el button dentro del div
         element.appendChild(button);
-
-        //metemos el div dentro del contenedor containerDollars
         containerDollars.appendChild(element);
 
     } )
@@ -92,6 +75,8 @@ const searchDollar = async() => {
     const containerDollars = document.getElementById("containerDollars");
     const select = document.getElementById("moneda");
 
+
+
     containerDollars.innerHTML = "";
 
     if(select.value == "Todas"){
@@ -99,16 +84,23 @@ const searchDollar = async() => {
         allMoneys.map((dolar)=>{
     
                 const element = document.createElement("div");
+                const button = document.createElement("button");
     
                 element.setAttribute("class", "pizarra");
+
+                
+                button.setAttribute("class", "boton-estrella");
+                button.setAttribute("onclick", `saveDollar(${JSON.stringify(dolar)})`)
         
                 element.innerHTML = `
                 <div class="item">${dolar.nombre}</div>
                 <div class="item"> Compra $${Math.round(dolar.compra)}</div>
-                <div class="item"> Venta $${Math.round(dolar.venta)}</div>
-                <button class="boton-estrella"><b>Favorito</b></button>`
+                <div class="item"> Venta $${Math.round(dolar.venta)}</div>`
                 ; 
-        
+
+                button.innerHTML = "Guardar";
+                element.appendChild(button);
+
                 containerDollars.appendChild(element);
         })
     }else{
@@ -118,19 +110,28 @@ const searchDollar = async() => {
             if(dolar.nombre == select.value){
     
                 const element = document.createElement("div");
+                const element2 = document.createElement("div");
+                const button = document.createElement("button");
     
-                element.setAttribute("id", "containerDollars");
+                element.setAttribute("class", "pizarra");
+
+                
+                button.setAttribute("class", "boton-estrella");
+                button.setAttribute("onclick", `saveDollar(${JSON.stringify(dolar)})`)
         
                 element.innerHTML = `
-                <div class="pizarra">
                 <div class="item">${dolar.nombre}</div>
                 <div class="item"> Compra $${Math.round(dolar.compra)}</div>
-                <div class="item"> Venta $${Math.round(dolar.venta)}</div>
-                <button class="boton-estrella"><b>Favorito</b></button>
-                </div>
-                <div><p> Fecha de actualizacion: ${new Date(dolar.fechaActualizacion)}</p></div>`;
-        
+                <div class="item"> Venta $${Math.round(dolar.venta)}</div>`;
+                element2.innerHTML =`<div class="item"> Fecha de actualizacion: 
+                ${new Date(dolar.fechaActualizacion).toLocaleString()}</div>`;
+
+                button.innerHTML = "Guardar";
+                element.appendChild(button);
+
+                element.appendChild(element2)
                 containerDollars.appendChild(element);
+
             }
         })
     }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +9,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap">
     <link rel="stylesheet" href="css/pages/index.css">
 </head>
-
-
 <body>
-
     <div class="contenedor_grid1">
-
         <div class="item_a">
             <header>
                 <section id="imagen_fondo">
-
                     <img src="img/logo_dolar.jpg" alt="imagen logo" class="logo">
-
                     <h1>Cotizador de monedas</h1>
                 </section>
             </header>
@@ -38,22 +31,18 @@
                 </ul>
 
                 <div class="comentario">
-                    <img src="img/imagen_comentario.jpg" alt="comentario" class="imagen_comentario">
-                    <h3>Roger Medina</h3>
-                   Tienen un buen servicio <br>
-                     y las cotizaciones son correctas
-                
+                    <img src="img/imagen_comentario.jpg" alt="comentario" class="imagen_comentario" id="comment-image">
+                    <h3 id="comment-author">Roger Medina</h3>
+                    <p id="comment-text">Tienen un buen servicio<br>y las cotizaciones son correctas</p>
                 </div>
             </nav>
         </div>
 
-
         <div class="item_b">
             <main>
-
                 <div class="migapan">
                     Usted esta aqui: <a href="index.html">Inicio</a> >
-                  </div>
+                </div>
 
                 <h1 class="titulo"> Pizarra de cotizaciones</h1>
 
@@ -69,41 +58,28 @@
                             <option value="Tarjeta">Dólar tarjeta</option>
                             <option value="Mayorista">Dólar Mayorista</option>
                             <option value="Cripto">Dólar Cripto</option>
-                            <option value="Euro">Dólar Euro</option>
+                            <option value="Euro">Euro</option>
                             <option value="Real Brasileño">Real Brasileño</option>
                             <option value="Peso Chileno">Peso Chileno</option>
                             <option value="Peso Uruguayo">Peso uruguayo</option>
-
                         </select>
                         <button onclick="searchDollar()">Buscar</button>
                     </div>
 
-
-                    <div id="ultima_act"></div>
-                    <div class="container" id="containerDollars">
-                    </div>
+                    <div class="container" id="containerDollars"></div>
                     <div id="ultima_actualizacion">Datos obtenidos de <b>dolarapi</b>.com</div>
                 </div>
-
             </main>
-
         </div>
 
-
         <div class="item_d">
-
-
             <footer>
-
-
-
                 <ul>
                     <h2>Institucional</h2>
-                    <li><a href="nosotros.html"><b>¿Quienes somos?</b></a></li>
-                    <li><a href="#">Socios estrategicos</a></li>
+                    <li><a href="#"><b>¿Quienes somos?</b></a></li>
+                    <li><a href="#">Socios estratégicos</a></li>
                     <li><a href="contacto.html"><b>Trabaje con nosotros</b></a></li>
                     <li><a href="#">Ayuda</a></li>
-
                 </ul>
 
                 <ul>
@@ -127,25 +103,12 @@
                     <li><b>Sebastian Morcillo (53233)</b></li>
                     <li><b>Oscar Ezequiel Maciel (53171)</b></li>
                     <p><b>TUP106-2024</b></p>
-
-
                 </ul>
-
-
-
             </footer>
-
         </div>
-
-
     </div>
 
-
     <script src="./js/index.js"></script>
-
-
+    <script src="./js/common.js"></script>
 </body>
-
-
-
 </html>
