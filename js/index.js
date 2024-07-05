@@ -24,8 +24,6 @@ const saveDollar = async(dolar) => {
     //convierto los dolares guardados a formato array
     const dolaresGuardadosParse = JSON.parse(dolaresGuardados)||[];
     
-    const currentDateTime = new Date().toLocaleString();
-    dolar.fechaGuardado = currentDateTime;
 
     //agregamos el dolar seleccionado al array de dolares
     dolaresGuardadosParse.push(dolar);
@@ -123,14 +121,14 @@ const searchDollar = async() => {
                 <div class="item">${dolar.nombre}</div>
                 <div class="item"> Compra $${Math.round(dolar.compra)}</div>
                 <div class="item"> Venta $${Math.round(dolar.venta)}</div>`;
-                element2.innerHTML =`<div class="item"> Fecha de actualizacion: 
-                ${new Date(dolar.fechaActualizacion).toLocaleString()}</div>`;
+                element2.innerHTML =`<div class="item"> Fecha de actualizacion: ${new Date(dolar.fechaActualizacion).toLocaleString()}</div>`;
 
                 button.innerHTML = "Guardar";
                 element.appendChild(button);
 
                 element.appendChild(element2)
                 containerDollars.appendChild(element);
+                containerDollars.appendChild(element2);
 
             }
         })
