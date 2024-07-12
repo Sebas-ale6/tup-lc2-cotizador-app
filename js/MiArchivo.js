@@ -42,7 +42,7 @@ const deployDollars = () => {
 
         const element = document.createElement("div");
         const currentDateTime = new Date().toLocaleString();
-        dolar.fechaGuardado = currentDateTime;
+        dolar.fechaActualizacion = currentDateTime;
 
         element.setAttribute("class", "contenedorDolar");
 
