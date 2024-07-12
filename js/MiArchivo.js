@@ -27,7 +27,7 @@ const deployDollars = () => {
 
     // Limpiar el contenedor antes de agregar los elementos actualizados
     container.innerHTML = "";
-      // Agregar el contenido estatico de contenedorDolar
+    // Agregar el contenido estatico de contenedorDolar
     container.innerHTML += `
     <div class="contenedorDolar">
         <span class="contenedor_data" id="blue">Fecha</span>
@@ -38,7 +38,7 @@ const deployDollars = () => {
     </div>
 `;
 
-    allDollars.map((dolar,index)=>{
+    allDollars.map((dolar, index) => {
 
         const element = document.createElement("div");
         const currentDateTime = new Date().toLocaleString();
@@ -46,7 +46,7 @@ const deployDollars = () => {
 
         element.setAttribute("class", "contenedorDolar");
 
-        const fecha = moment(dolar.fechaGuardado).format('MMMM Do YYYY, h:mm:ss a')
+        const fecha = moment(dolar.fechaActualizacion).format('LLL')
 
         element.innerHTML = `
         <span class="contenedor_data" >${fecha}</span>
@@ -67,9 +67,53 @@ const deployDollars = () => {
             deleteDollar(index);
         })
     })
-    
+
     console.log()
 
 };
+
+const printData = () => {
+
+    const allDollars = getDollars();
+
+    const originalContent = document.body.innerHTML;
+
+    const container = document.body;
+
+    // Limpiar el contenedor antes de agregar los elementos actualizados
+    container.innerHTML = "";
+    // Agregar el contenido estatico de contenedorDolar
+    container.innerHTML += `
+    <div class="contenedorDolar">
+        <span class="contenedor_data">Fecha</span>
+        <span class="contenedor_data">Moneda</span>
+        <span class="contenedor_data">Compra</span>
+        <span class="contenedor_data">Venta</span>
+    </div>
+`;
+
+    allDollars.map((dolar, index) => {
+
+        const element = document.createElement("div");
+
+        element.setAttribute("class", "contenedorDolar");
+
+        const fecha = moment(dolar.fechaActualizacion).format('LLL')
+
+        element.innerHTML = `
+        <span class="contenedor_data">${fecha}</span>
+        <span class="contenedor_data">${dolar.nombre}</span>
+        <span class="contenedor_data">${dolar.compra}</span>
+        <span class="contenedor_data">${dolar.venta}</span>
+        `
+        container.appendChild(element);
+
+    })
+
+    window.print();
+
+    document.body.innerHTML = originalContent;
+
+}
 
 deployDollars();
