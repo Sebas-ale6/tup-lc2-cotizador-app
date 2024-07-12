@@ -1,75 +1,61 @@
-// Función para obtener el array de dólares desde localStorage
-const getDollars = () => {
-    const savedDollars = window.localStorage.getItem("dolaresGuardados");
-    const savedDollarsParse = JSON.parse(savedDollars);
-    return savedDollarsParse;
+const getDolarDate = async (name, date) => {
+    const url = `https://api.argentinadatos.com/v1/cotizaciones/dolares/${name}/${date}`;
+    const request = await fetch(url);
+    const data = await request.json();
+    return data;
 };
 
-// Función principal para obtener y mostrar las cotizaciones del dólar desde el array
 const getDollar = async () => {
-    // Obtiene los elementos del DOM necesarios
-    const input = document.getElementById("moneda"); // Campo de entrada para el tipo de dólar
-    const container = document.getElementById("contenedor"); // Contenedor para los datos de la cotización
-    const chartContainer = document.getElementById("chartContainer"); // Contenedor para el gráfico
+    const input = document.getElementById("moneda");
+    const container = document.getElementById("contenedor");
+    const chartContainer = document.getElementById("grafico");
 
-    // Limpia el contenedor de datos
     container.innerHTML = "";
 
-    // Obtiene los datos desde localStorage
-    const dollars = getDollars();
-    
-    // Filtra los datos según el tipo de dólar seleccionado
-    const selectedDollars = dollars.filter(dollar => dollar.nombre.toLowerCase() === input.value.toLowerCase());
-
-    // Array para almacenar los puntos de datos del gráfico
     const dataPoints = [];
 
-    // Variables para gestionar la variación del precio del dólar
-    let variacion = "⏸";
+    let variacion = "⏸"
     let precioPrevio = 0;
 
-    // Bucle para mostrar las cotizaciones y llenar el array de puntos de datos
-    selectedDollars.forEach((dolar) => {
-        // Determina la variación del precio del dólar
-        if (precioPrevio < dolar.venta) { 
-            variacion = "⬆"; // El precio subió
-        } else if (precioPrevio === dolar.venta) { 
-            variacion = "⏸"; // El precio no cambió
-        } else {
-            variacion = "⬇"; // El precio bajó
+    for (let i = 1; i <= 5; i++) {
+
+        const date = moment().subtract(i, 'days').format('YYYY/MM/DD');
+        const dolar = await getDolarDate(input.value.toLowerCase(), date);
+
+        if(precioPrevio < Math.round(dolar.venta)){ 
+            variacion ="⬇"
+        }else if(precioPrevio == Math.round(dolar.venta)){ 
+            variacion = "⏸" 
+        }else{
+            variacion = "⬆" 
         }
 
-        // Crea un nuevo elemento div para mostrar los datos de la cotización
         const element = document.createElement("div");
         element.setAttribute("class", "contenedorDolar");
 
-        // Rellena el div con los datos de la cotización
         element.innerHTML = `
-            <span class="contenedor_data">${new Date(dolar.fecha).toLocaleDateString()}</span>
-            <span class="contenedor_data">${dolar.casa}</span>
-            <span class="contenedor_data">${dolar.compra}</span>
-            <span class="contenedor_data">${dolar.venta}</span>
-            <span class="contenedor_data">${variacion}</span>
+        <span class="contenedor_data">${date}</span>
+        <span class="contenedor_data">${dolar.casa}</span>
+        <span class="contenedor_data">${Math.round(dolar.compra)}</span>
+        <span class="contenedor_data">${Math.round(dolar.venta)}</span>
+        <span class="contenedor_data">${variacion}</span>
         `;
-        // Añade el div al contenedor principal
         container.appendChild(element);
 
-        // Actualiza el precio previo para la siguiente iteración
-        precioPrevio = dolar.venta;
+        if(precioPrevio == 0){ precioPrevio = dolar.venta }
 
-        // Añade el punto de datos al array para el gráfico
-        dataPoints.push({ x: new Date(dolar.fecha), y: parseFloat(dolar.venta) });
-    });
+        dataPoints.push({ x: new Date(date), y: parseFloat(dolar.venta) });
 
-    // Crea un nuevo gráfico usando CanvasJS
-    const chart = new CanvasJS.Chart(chartContainer, {
+    }
+
+    const chart = new CanvasJS.Chart(grafico, {
         animationEnabled: true,
         theme: "light2",
         title: {
             text: "Cotización del Dólar"
         },
         axisX: {
-            valueFormatString: "DD MMM YYYY",
+            valueFormatString: "YYYY/MM/DD",
             labelAngle: -50
         },
         axisY: {
@@ -82,9 +68,7 @@ const getDollar = async () => {
         }]
     });
 
-    // Renderiza el gráfico
     chart.render();
 };
 
-// Añade un evento al botón de búsqueda para que ejecute la función getDollar al hacer clic
 document.getElementById("botonBuscar").addEventListener("click", getDollar);

@@ -18,21 +18,6 @@
     text-align:center;
     font-size: clamp(12px, 4vw, 32px);
 }
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-    min-width: 534px;
-}
-th, td {
-    border: 1px solid #ddd;
-    padding: 1px;
-    text-align: left;
-}
-th {
-    background-color: #263bdf;
-}
-
-.boton{
+.borrar-boton{
 font-weight: bolder;
 }

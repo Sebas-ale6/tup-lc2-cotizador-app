@@ -23,9 +23,10 @@ const saveDollar = async(dolar) => {
 
     //convierto los dolares guardados a formato array
     const dolaresGuardadosParse = JSON.parse(dolaresGuardados)||[];
+    
 
     //agregamos el dolar seleccionado al array de dolares
-    dolaresGuardadosParse.push({...dolar, fecha:Date.now()});
+    dolaresGuardadosParse.push(dolar);
 
     //guardamos el array, ahora con el nuevo dolar agregado en el almacenamiento local
     window.localStorage.setItem("dolaresGuardados", JSON.stringify(dolaresGuardadosParse));
@@ -106,7 +107,8 @@ const searchDollar = async() => {
 
             if(dolar.nombre == select.value){
     
-             const element = document.createElement("div");
+                const element = document.createElement("div");
+                const element2 = document.createElement("div");
                 const button = document.createElement("button");
     
                 element.setAttribute("class", "pizarra");
@@ -118,14 +120,19 @@ const searchDollar = async() => {
                 element.innerHTML = `
                 <div class="item">${dolar.nombre}</div>
                 <div class="item"> Compra $${Math.round(dolar.compra)}</div>
-                <div class="item"> Venta $${Math.round(dolar.venta)}</div>`
-                ; 
+                <div class="item"> Venta $${Math.round(dolar.venta)}</div>`;
+                element2.innerHTML =`<div class="item"> Fecha de actualizacion: ${new Date(dolar.fechaActualizacion).toLocaleString()}</div>`;
 
                 button.innerHTML = "Guardar";
                 element.appendChild(button);
-                        
+
+                element.appendChild(element2)
                 containerDollars.appendChild(element);
+                containerDollars.appendChild(element2);
+
             }
         })
     }
+
+
 }
