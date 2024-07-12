@@ -1,0 +1,40 @@
+.contenedorDolar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    max-width: auto;
+    margin: 0px;
+    padding: 0px;
+}
+
+.contenedor_data {
+    width: 20%;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.titulo {
+    text-align: center;
+    font-size: clamp(12px, 4vw, 32px);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 534px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 1px;
+    text-align: left;
+}
+
+th {
+    background-color: #263bdf;
+}
+
+.boton {
+    font-weight: bolder;
+}
