@@ -41,8 +41,7 @@ const deployDollars = () => {
     allDollars.map((dolar, index) => {
 
         const element = document.createElement("div");
-        const currentDateTime = new Date().toLocaleString();
-        dolar.fechaActualizacion = currentDateTime;
+      
 
         element.setAttribute("class", "contenedorDolar");
 
