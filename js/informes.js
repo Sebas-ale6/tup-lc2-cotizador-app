@@ -47,8 +47,8 @@ const getDollar = async () => {
         element.innerHTML = `
             <span class="contenedor_data">${new Date(dolar.fecha).toLocaleDateString()}</span>
             <span class="contenedor_data">${dolar.casa}</span>
-            <span class="contenedor_data">${dolar.compra}</span>
-            <span class="contenedor_data">${dolar.venta}</span>
+            <span class="contenedor_data">${Math.round(dolar.compra)}</span>
+            <span class="contenedor_data">${Math.round(dolar.venta)}</span>
             <span class="contenedor_data">${variacion}</span>
         `;
         // Añade el div al contenedor principal
