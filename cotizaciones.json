@@ -1,0 +1,119 @@
+[
+    {
+        "moneda": "USD",
+        "casa": "bolsa",
+        "nombre": "Bolsa",
+        "compra": 1390.9,
+        "venta": 1402.5,
+        "fechaActualizacion": "2024-07-04T20:58:00.000Z",
+        "fecha": 1720140369425
+    },
+    {
+        "moneda": "CLP",
+        "casa": "oficial",
+        "nombre": "Peso Chileno",
+        "compra": 98.36,
+        "venta": 98.48,
+        "fechaActualizacion": "2024-07-04T19:58:00.000Z",
+        "fecha": 1720140369425
+    },
+    {
+        "moneda": "BRL",
+        "casa": "oficial",
+        "nombre": "Real Brasileño",
+        "compra": 149.43,
+        "venta": 149.54,
+        "fechaActualizacion": "2024-07-01T19:58:00.000Z",
+        "fecha": 1720140369425
+    },
+    {
+        "moneda": "USD",
+        "casa": "mayorista",
+        "nombre": "Mayorista",
+        "compra": 892.21,
+        "venta": 932.13,
+        "fechaActualizacion": "2024-07-04T20:58:00.000Z",
+        "fecha": 1720140370042
+    },
+    {
+        "moneda": "USD",
+        "casa": "tarjeta",
+        "nombre": "Tarjeta",
+        "compra": 1430.4,
+        "venta": 1494.4,
+        "fechaActualizacion": "2024-07-04T15:05:00.000Z",
+        "fecha": 1720140370459
+    },
+    {
+        "moneda": "USD",
+        "casa": "bolsa",
+        "nombre": "Bolsa",
+        "compra": 1398.4,
+        "venta": 1399.3,
+        "fechaActualizacion": "2024-07-11T20:56:00.000Z",
+        "fecha": 1720739219100
+    },
+    {
+        "moneda": "USD",
+        "casa": "tarjeta",
+        "nombre": "Tarjeta",
+        "compra": 1436.8,
+        "venta": 1500.8,
+        "fechaActualizacion": "2024-07-11T15:03:00.000Z",
+        "fecha": 1720742543901
+    },
+    {
+        "moneda": "USD",
+        "casa": "bolsa",
+        "nombre": "Bolsa",
+        "compra": 1305.6,
+        "venta": 1311.3,
+        "fechaActualizacion": "2024-07-15T18:58:00.000Z",
+        "fecha": 1721073719080
+    },
+    {
+        "moneda": "USD",
+        "casa": "mayorista",
+        "nombre": "Mayorista",
+        "compra": 894.71,
+        "venta": 934.63,
+        "fechaActualizacion": "2024-07-15T18:58:00.000Z",
+        "fecha": 1721073847081
+    },
+    {
+        "moneda": "BRL",
+        "casa": "oficial",
+        "nombre": "Real Brasileño",
+        "compra": 169.43,
+        "venta": 169.54,
+        "fechaActualizacion": "2024-07-15T19:58:00.000Z",
+        "fecha": 1721074284883
+    },
+    {
+        "moneda": "CLP",
+        "casa": "oficial",
+        "nombre": "Peso Chileno",
+        "compra": 101.36,
+        "venta": 101.48,
+        "fechaActualizacion": "2024-07-15T19:58:00.000Z",
+        "fecha": 1721075745240
+    },
+    {
+        "moneda": "UYU",
+        "casa": "oficial",
+        "nombre": "Peso Uruguayo",
+        "compra": 22.97,
+        "venta": 23,
+        "fechaActualizacion": "2024-07-15T19:58:00.000Z",
+        "fecha": 1721075746590
+    },
+    {
+        "moneda": "BRL",
+        "casa": "oficial",
+        "nombre": "Real Brasileño",
+        "compra": 169.43,
+        "venta": 169.54,
+        "fechaActualizacion": "2024-07-15T19:58:00.000Z",
+        "fecha": 1721075747439
+    }
+]

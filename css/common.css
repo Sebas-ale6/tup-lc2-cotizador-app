@@ -9,8 +9,10 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap'
 
   body {
     margin: 0;
-    padding: 50;
-    font-weight:bolder;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-weight: bolder;
   }
 
   .migapan{
@@ -51,15 +53,14 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap'
     font-size: clamp(12px, 4vw, 32px);
 }
 
-  .contenedor_grid1 {
-    display: grid;
-    grid-template-columns: repeat(4) ;
-    grid-template-areas: 
-        "header header header header"
-        "sidebar main main main"
-        "footer footer footer footer";
-    background-color: #cdccc9d8;
-    height: 100vh;
+.contenedor_grid1 {
+  display: grid;
+  grid-template-columns: repeat(4);
+  grid-template-areas:
+    "header header header header"
+    "sidebar main main main";
+  background-color: #cdccc9d8;
+  flex: 1;
 }
 
 
@@ -73,6 +74,7 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap'
     color: black;
     background-color: #7ba9d6;
     height: 500px;
+    width: 500px;
     line-height: 40px;
   }
 
@@ -103,6 +105,9 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap'
 #orange{
   background-color: rgb(255, 102, 0);
 }
+#yellow{
+  background-color: rgb(243, 243, 32);
+}
 
 .item_c nav ul li a:hover {
     background-color:  rgba(105, 180, 234, 0.3);
@@ -122,6 +127,7 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap'
 }
 .comentario{
   display: flex;
+  width: 400px;
   flex-direction: column;
   align-items: center; /* Alinea verticalmente los elementos */
   max-width: auto;
@@ -133,16 +139,18 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap'
   
   }
 
-footer{
-  background-color: #dba33bf3;
-  color: #000;
-  display: flex;
-  padding: 50px;
-  justify-content: space-around;
-  font-size: clamp(6px, 4vw, 15px);
-  font-weight:bolder;
+  footer {
+    background-color: #dba33bf3;
+    color: #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-size: clamp(8px, 2vw, 12px);
+    font-weight: bolder;
+    grid-area: footer;
+    width: 100%;
+  }
 
-}
 
 footer ul li a {
   color: #000;
